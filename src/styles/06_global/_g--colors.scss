@@ -1,0 +1,9 @@
+:root {
+    @each $key, $tones in $colors {
+        $index:0;
+        @each $color in $tones{
+            $index:$index+1;
+            --color-#{$key}-#{$index}:#{$color};
+        }
+    }
+}

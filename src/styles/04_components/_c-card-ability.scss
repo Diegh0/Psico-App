@@ -1,0 +1,22 @@
+.c-card-ability{
+    --c-card-ability-background-color:var(--color-primario-claro-3);
+    --c-card-ability-color-font:var(--color-secundario-9);
+    --c-card-ability-font-size:var(--size-m);
+
+    webkit-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);
+
+    background-color: var(--c-card-ability-background-color);
+    color: var(--c-card-ability-color-font);
+    font-size:var(--c-card-ability-font-size);
+
+    padding: 65px;
+    margin-top: 0px;
+    font-weight:500;
+
+    &:hover{
+        border-bottom: solid 1px black;
+    }
+   
+}

@@ -1,0 +1,50 @@
+.l-columns {
+    display: grid;
+    
+    @for $i from 1 through 6 {
+        &--#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    @each $key, $value in $breakpoints {
+        @media (min-width: #{$value}) {
+            $separator: "\\@";
+
+            @if ($key =="") {
+                $separator: "";
+            }
+
+            @for $i from 1 through 6 {
+                &--#{$i}#{$separator}#{$key} {
+                    grid-template-columns: repeat($i, 1fr);
+                }
+            }
+        }
+    }
+
+    &__area {
+        
+        @for $i from 1 through 8 {
+            &--span-#{$i} {
+                grid-column: span $i;
+            }
+        }
+
+        @each $key, $value in $breakpoints {
+            @media (min-width: #{$value}) {
+                $separator: "\\@";
+
+                @if ($key =="") {
+                    $separator: "";
+                }
+
+                @for $i from 1 through 8 {
+                    &--span-#{$i}#{$separator}#{$key} {
+                        grid-column: span $i;
+                    }
+                }
+            }
+        }
+    }
+}

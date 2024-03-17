@@ -1,0 +1,9 @@
+<div  class="l-flex l-flex--justify-content-center l-flex--direction-colum">
+    @for (habilidad of habilidades | async ; track habilidad.id){
+        <div class="c-card-ability">        
+            <div class="c-card-ability__habilidades">{{habilidad.nombre}}</div>
+        </div>
+    }   
+</div>
+
+

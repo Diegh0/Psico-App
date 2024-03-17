@@ -1,0 +1,51 @@
+$colors: (
+    // Gama de colores para el modo oscuro del color primario
+    "primario-oscuro": (#190501, #1B0B08, #191010, #1B1818, #1C1C1C, #231F1F, #2C1D1B, #3E1913, #551002),
+    
+    // Gama de colores para el modo claro del color primario
+    "primario-claro": (#025024, #048643, #4ae6a7,#28d18e, #0AEB89, #31F6A8, #67F9C6, #98FBDC, #CEFDF1, #FFFFFF),
+    
+    // Gama de colores secundarios
+    "secundario": (#f3dcdc,#EBEBEB, #EDEDED, #F0F0F0, #F2F2F2, #F5F5F5, #F7F7F7, #FAFAFA, #FCFCFC, #FFFFFF)
+);
+$paddings: (
+        2px, 4px, 8px, 10px, 12px, 16px, 20px, 24px, 30px, 36px,
+        40px, 48px, 56px, 64px, 72px, 80px, 96px, 112px, 128px, 144px
+);
+
+$margins: (
+        2px, 4px, 8px, 10px, 12px, 16px, 20px, 24px, 30px, 36px,
+        40px, 48px, 56px, 64px, 72px, 80px, 96px, 112px, 128px, 144px
+);
+$font-size: (
+  "xxs": 10px,
+  "xs": 12px,
+  "s": 15px,
+  "m": 24px,
+  "l": 32px,
+  "xl":46px,
+  "xxl":64px,
+  "giant":100px
+);
+$l-flex-common-properties: (
+    "flex-wrap": wrap,
+    "flex-direction": (
+        "row": row,
+        "column": column
+    ),
+    "align-items": center
+);
+
+$l-justify-content-values: (
+    "center": center,
+    "between": space-between,
+    "space-around": space-around
+);
+
+// Creamos el mapa de propiedades con los valores de "justify-content" extendidos
+$l-flex-properties: map-merge($l-flex-common-properties, (
+    "justify-content": $l-justify-content-values
+));
+
+
+$breakpoints: ("tablet": 768px,"desktop":992px);

@@ -1,0 +1,61 @@
+.l-grid-area-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "col1 col2 col3";
+
+    @each $breakpoint, $size in $breakpoints {
+        @media (min-width: #{$size}) {
+
+            &--321-horizontal\@#{$breakpoint} {
+                grid-template-areas:
+                    "col3 col2 col1";
+            }
+
+            &--123-horizontal\@#{$breakpoint} {
+                grid-template-areas:
+                    "col1 col2 col3";
+            }
+
+            &--123-vertical\@#{$breakpoint} {
+                grid-template-areas:
+                    "col1"
+                    "col2"
+                    "col3";
+            }
+
+            &--132-vertical\@#{$breakpoint} {
+                grid-template-areas:
+                    "col1"
+                    "col3"
+                    "col2";
+            }
+
+            &--213-vertical\@#{$breakpoint} {
+                grid-template-areas:
+                    "col2"
+                    "col1"
+                    "col3";
+            }
+
+            &--312-vertical\@#{$breakpoint} {
+                grid-template-areas:
+                    "col3"
+                    "col1"
+                    "col2";
+            }
+
+        }
+    }
+
+    &__col1 {
+        grid-area: col1;
+    }
+
+    &__col2 {
+        grid-area: col2;
+    }
+
+    &__col3 {
+        grid-area: col3;
+    }
+}

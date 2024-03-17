@@ -1,0 +1,56 @@
+.l-flex {
+    display: flex;
+
+    // Iterar sobre las propiedades comunes
+    @each $prop-name, $prop-value in $l-flex-common-properties {
+        @if type-of($prop-value) == map {
+            @each $sub-prop-name, $sub-prop-value in $prop-value {
+                &--#{$prop-name}-#{$sub-prop-name} {
+                    #{$prop-name}: $sub-prop-value;
+                }
+            }
+        }
+        @else {
+            &--#{$prop-name}-#{$prop-value} {
+                #{$prop-name}: $prop-value;
+            }
+        }
+    }
+
+    // Iterar sobre los valores de "justify-content"
+    @each $justify-value, $justify-content in map-get($l-flex-properties, "justify-content") {
+        &--justify-content-#{$justify-value} {
+            justify-content: $justify-content;
+        }
+    }
+}
+
+// Bucle para generar los modificadores de la clase .l-flex dentro de media queries
+@each $key, $value in $breakpoints {
+    @media (min-width: #{$value}) {
+        .l-flex {
+            // Iterar sobre las propiedades comunes
+            @each $prop-name, $prop-value in $l-flex-common-properties {
+                @if type-of($prop-value) == map {
+                    @each $sub-prop-name, $sub-prop-value in $prop-value {
+                        &--#{$prop-name}-#{$sub-prop-name}\@#{$key} {
+                            #{$prop-name}: $sub-prop-value;
+                        }
+                    }
+                }
+                @else {
+                    &--#{$prop-name}-#{$prop-value}\@#{$key} {
+                        #{$prop-name}: $prop-value;
+                    }
+                }
+            }
+
+            // Iterar sobre los valores de "justify-content"
+            @each $justify-value, $justify-content in map-get($l-flex-properties, "justify-content") {
+                &--justify-content-#{$justify-value}\@#{$key} {
+                    justify-content: $justify-content;
+                }
+            }
+        }
+    }
+}

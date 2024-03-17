@@ -1,0 +1,11 @@
+.c-body-inicio{
+    background-image: url("../../assets/header/relaxPuerto.jpg");
+
+    background-size:cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    filter: brightness(80%) contrast(150%);
+
+    /* Ajusta la altura para ocupar toda la pantalla */
+    height: 65vh;
+}

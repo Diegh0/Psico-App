@@ -1,0 +1,7 @@
+:root{
+    @each $size, $lista in $font-size{
+      @for $i from 1 through length($lista){
+        --size-#{$size}: #{nth($lista, $i)};
+      }
+    }
+  }

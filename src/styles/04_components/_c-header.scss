@@ -1,0 +1,61 @@
+.c-nav{
+    --c-header-background-color:var(--color-primario-claro-4);
+
+    --c-header-color-font:var(--color-secundario-7);
+    --c-header-color-font-hover:var(--color-secundario-1);
+    --c-header-underline-color:var(--color-primario-claro-3);
+
+    background-color: var(--c-header-background-color);
+    padding: 10px;
+    text-align: center;
+    
+    &__titulo{
+        text-decoration: none;
+        color: var(--c-header-color-font);
+        font-size: x-large;
+        margin-left: 50px;
+    }
+    &__opcions{
+        // display: flex;
+        display: inline-block;
+        position: relative;
+        transition: 0.4s all ease;
+
+
+        text-decoration: none;
+        padding: 10px;
+        color: var(--c-header-color-font); 
+
+        &:hover{
+            filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+            transition:0.4s all ease ;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0px;
+            left: 0;
+            background-color: var(--c-header-underline-color);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+    &__user{
+        scale: 1;
+        @media (min-width: 768px){
+            margin-right: 50px;
+            margin-top: 5px;
+        }
+    }
+}
+.nav.dark-theme{
+    --c-header-background-color-dark:var(  --color-primario-oscuro-5);
+    --c-header-color-font-dark:var(--color-secundario-7);
+}
