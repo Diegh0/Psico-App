@@ -1,13 +1,9 @@
 .body{
     
-    --body-background-color:var(--color-primario-claro-6);
-    --body-background-color-dark:var(--color-primario-oscuro-5);
-
-    //background-color: var(--body-background-color);
+    //--body-background-color:var(--color-primario-claro-3);
+    --body-background-color:var(--color-primario-claro-9);
+    
+    background-color: var(--body-background-color);
     height: 100%;
     font-family: 'Quicksand', sans-serif;
-    &--dark{
-        background-color: var(--body-background-color-dark);
-
-    }
 }

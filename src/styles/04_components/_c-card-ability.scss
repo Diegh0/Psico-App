@@ -2,21 +2,45 @@
     --c-card-ability-background-color:var(--color-primario-claro-3);
     --c-card-ability-color-font:var(--color-secundario-9);
     --c-card-ability-font-size:var(--size-m);
+    --c-card-padding:var(--padding-10);
+    --c-card-margin:var(--margin-7);
 
-    webkit-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 7px 10px 0px rgba(28,28,28,1);
+    -moz-box-shadow: 6px 7px 10px 0px rgba(28,28,28,1);
+    box-shadow: 6px 7px 10px 0px rgba(28,28,28,1);
+    
+    
+    // background-color: var(--c-card-ability-background-color);
+    // background: linear-gradient(to bottom, var(--c-card-ability-background-color), #28d18e);
+    background-image: url("../../assets/header/relaxPuerto.jpg");
 
-    background-color: var(--c-card-ability-background-color);
+    background-size:cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    filter: brightness(80%) contrast(150%);
     color: var(--c-card-ability-color-font);
     font-size:var(--c-card-ability-font-size);
 
-    padding: 65px;
-    margin-top: 0px;
+    border-top: 60px solid var(--color-primario-claro-4);
+    text-align: center;
+    width: 70%;
+    
+    border-radius: 15px;
+    padding: var(--c-card-padding);
+    margin: var(--c-card-margin);
     font-weight:500;
 
-    &:hover{
-        border-bottom: solid 1px black;
-    }
-   
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-15px);
+      }
+   &__habilidades{
+    position: absolute; /* Establece la posición absoluta */
+    top: -55px; /* Coloca el texto encima del borde superior */
+    border-top-left-radius: 10px; /* Ajusta los radios del borde para que coincidan con los de la tarjeta */
+    border-top-right-radius: 10px; 
+    width: 100%;
+    left: 0;
+   }
 }
