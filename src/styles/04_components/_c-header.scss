@@ -61,6 +61,13 @@
         }
    
     }
+    &__img-dark{
+        width: 16px;
+        margin-right: 15px;
+      }
+      &__img-day{
+        margin-right: 15px;
+      }
 }
 .light-theme {
     background-color: var(--c-header-background-color);

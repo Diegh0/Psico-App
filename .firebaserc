@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mental-ht": {
+      "hosting": {
+        "mental-health": [
+          "mental-ht"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mental-ht"
+  }
+}

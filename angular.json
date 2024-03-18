@@ -101,6 +101,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "mental-health:build:production",
+              "serveTarget": "mental-health:serve:production"
+            },
+            "development": {
+              "buildTarget": "mental-health:build:development",
+              "serveTarget": "mental-health:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

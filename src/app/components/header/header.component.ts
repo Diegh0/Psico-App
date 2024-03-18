@@ -13,7 +13,7 @@ import { TemaAppService } from '../../services/tema-app.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  private temaService  = inject(TemaAppService);
+  public temaService  = inject(TemaAppService);
 
   toggleTheme(): void {
     this.temaService.toggleTheme();

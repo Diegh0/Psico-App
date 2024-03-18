@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { TemaAppService } from './services/tema-app.service';
 
 @Component({
     selector: 'app-root',
@@ -12,4 +13,12 @@ import { FooterComponent } from "./components/footer/footer.component";
 })
 export class AppComponent {
   title = 'mental-health';
+  private temaService  = inject(TemaAppService);
+
+  toggleTheme(): void {
+    this.temaService.toggleTheme();
+  }
+  isDarkTheme(): boolean {
+    return this.temaService.isDarkTheme();
+  }
 }

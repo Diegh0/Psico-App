@@ -20,6 +20,11 @@
             </p>
         </div>
         <div class="l-flex l-flex--align-items-center l-flex--justify-content-center">
+            @if(temaService.darkTheme){
+                <img class="c-nav__img-dark" src="../../assets/header/moon.png">
+            }@else{
+                <img class="c-nav__img-day" src="../../assets/header/sun.png">
+            }
             <mat-slide-toggle  (change)="toggleTheme()"></mat-slide-toggle>
             <a><img class="c-nav__user" src="../../assets/header/user-icon2.png"></a>
         </div>
