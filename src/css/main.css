@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 .l-flex {
   display: flex;
 }
@@ -265,10 +266,11 @@
 
 .c-nav {
   --c-header-background-color:var(--color-primario-claro-4);
+  --c-header-background-color-dark:var(--color-primario-oscuro-5);
   --c-header-color-font:var(--color-secundario-7);
   --c-header-color-font-hover:var(--color-secundario-1);
   --c-header-underline-color:var(--color-primario-claro-3);
-  background-color: var(--c-header-background-color);
+  --c-header-underline-color-dark:var(--color-secundario-1);
   padding: 10px;
   text-align: center;
 }
@@ -313,12 +315,20 @@
   .c-nav__user {
     margin-right: 50px;
     margin-top: 5px;
+    padding-left: 20px;
   }
 }
 
-.nav.dark-theme {
-  --c-header-background-color-dark:var( --color-primario-oscuro-5);
-  --c-header-color-font-dark:var(--color-secundario-7);
+.light-theme {
+  background-color: var(--c-header-background-color);
+}
+
+.dark-theme {
+  background-color: var(--c-header-background-color-dark);
+}
+
+.dark-theme ::after {
+  background-color: var(--c-header-underline-color-dark);
 }
 
 .c-card-ability {
@@ -341,9 +351,9 @@
 
 .c-footer {
   --c-footer-background-color:var(--color-primario-claro-4);
+  --c-footer-background-color-dark:var(--color-primario-oscuro-5);
   --c-footer-color-font:var(--color-secundario-7);
   --c-footer-font-size:var(--size-l);
-  background-color: var(--c-footer-background-color);
   color: var(--c-footer-color-font);
   position: relative;
   bottom: 0;
@@ -360,6 +370,14 @@
 .c-footer__autor {
   padding-top: 30px;
   margin: 0;
+}
+
+.light-theme-footer {
+  background-color: var(--c-footer-background-color);
+}
+
+.dark-theme-footer {
+  background-color: var(--c-footer-background-color-dark);
 }
 
 .c-body-inicio {

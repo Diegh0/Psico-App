@@ -1,4 +1,4 @@
-<div class="c-footer">
+<div class="c-footer" [class.dark-theme-footer]="isDarkTheme()" [class.light-theme-footer]="!isDarkTheme()">
     <div class="c-footer__frase">
         {{ fraseAleatoria?.descripcion }}
     </div>

@@ -1,9 +1,9 @@
 .c-footer{
     --c-footer-background-color:var(--color-primario-claro-4);
+    --c-footer-background-color-dark:var(--color-primario-oscuro-5);
     --c-footer-color-font:var(--color-secundario-7);
     --c-footer-font-size:var(--size-l);
 
-    background-color: var(--c-footer-background-color);
     color: var(--c-footer-color-font);
     position: relative;
     bottom: 0;
@@ -23,3 +23,9 @@
         margin: 0;
     }
 }
+.light-theme-footer {
+    background-color: var( --c-footer-background-color);
+  }
+.dark-theme-footer {
+    background-color: var(--c-footer-background-color-dark);
+  }

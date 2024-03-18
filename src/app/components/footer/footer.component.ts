@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FrasesService } from '../../services/frases.service';
 import { AsyncPipe } from '@angular/common';
 import { Frase } from '../../Models/Frase';
+import { TemaAppService } from '../../services/tema-app.service';
 
 @Component({
   selector: 'app-footer',
@@ -13,8 +14,14 @@ import { Frase } from '../../Models/Frase';
 export class FooterComponent {
 
   private frasesService  = inject(FrasesService);
-  // frase=this.frasesService.getFrases();
+  private temaService  = inject(TemaAppService);
 
+  toggleTheme(): void {
+    this.temaService.toggleTheme();
+  }
+  isDarkTheme(): boolean {
+    return this.temaService.isDarkTheme();
+  }
   fraseAleatoria: Frase | null = null;
 
   ngOnInit(): void {
