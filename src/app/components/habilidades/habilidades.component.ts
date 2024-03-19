@@ -3,11 +3,12 @@ import { HabilidadesService } from '../../services/habilidades.service';
 import { AsyncPipe } from '@angular/common';
 import { Habilidad } from '../../Models/Habilidad';
 import { TemaAppService } from '../../services/tema-app.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-habilidades',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe,RouterLink],
   templateUrl: './habilidades.component.html',
   styleUrl: './habilidades.component.scss'
 })

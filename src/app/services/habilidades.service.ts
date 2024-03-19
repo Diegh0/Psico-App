@@ -2,7 +2,6 @@ import { Injectable, inject } from '@angular/core';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Habilidad } from '../Models/Habilidad';
-import { Prueba } from '../Models/Prueba';
 //NOMBRE DE NUESTRA COLECCION DE FIRESTORE
 const PATH = 'Habilidades';
 
@@ -21,5 +20,5 @@ export class HabilidadesService {
     return collectionData(this.collectionBD) as Observable<Habilidad[]>
   }
 
- 
+
 }

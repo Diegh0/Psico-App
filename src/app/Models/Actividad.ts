@@ -1,5 +1,5 @@
 export interface Actividad{
-    idActividad:number,
+    id:number,
     nombre:string,
     duracion:number,
     descripcion:string

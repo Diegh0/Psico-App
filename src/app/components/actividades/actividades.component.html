@@ -1,0 +1,8 @@
+<div class="l-columns l-columns--1 l-columns--2@tablet l-columns--3@desktop">
+    @for(actividad of actividades | async ; track actividad.id){
+        {{actividad.nombre}}
+    }
+    <div>{{ actividades | async | json }}</div>
+</div>
+
+
