@@ -1,0 +1,13 @@
+.c-title-activity{
+    --c-title-activity-font-size:var(--size-l);
+    --c-tittle-activity-color-font-dark:var(--color-secundario-10);
+    display: flex;
+    justify-content: center;
+    font-size: var(--c-title-activity-font-size);
+    font-weight: 500;
+    margin: 20px;
+}
+.dark-theme-title-activity {
+    color: var(--c-tittle-activity-color-font-dark);
+
+  }

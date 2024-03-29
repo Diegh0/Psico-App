@@ -1,8 +1,22 @@
-<div class="l-columns l-columns--1 l-columns--2@tablet l-columns--3@desktop">
-    @for(actividad of actividades | async ; track actividad.id){
-        {{actividad.nombre}}
-    }
-    <div>{{ actividades | async | json }}</div>
+<select id="tareas" [(ngModel)]="filtroEstado">
+    <option *ngFor="let opcion of opciones" [value]="opcion">{{ opcion }}</option>
+</select>
+
+<div *ngFor="let actividad of actividades | async ">
+    <div >
+        <div class="c-title-activity" [class.dark-theme-title-activity]="isDarkTheme()"[class.light-theme-title-activity]="!isDarkTheme()">
+            {{actividad.nombreHabilidad}}
+        </div>
+    </div>
+    <div *ngFor="let key of getActividadKeys(actividad) ">
+        
+        <div class="c-card-activity" [class.dark-theme-activity]="isDarkTheme()"[class.light-theme-activity]="!isDarkTheme()">
+            <a class="c-card-activity__nombre" routerLink="/detalleActividad/{{actividad[key].id}}" href="#">
+                {{ actividad[key].nombre }}
+            </a>
+            <div class="c-card-activity__duracion">{{ actividad[key].duracion }} min</div>
+        </div>
+    </div>
 </div>
 
-
+    

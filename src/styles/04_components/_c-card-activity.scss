@@ -1,0 +1,35 @@
+.c-card-activity{
+    --c-card-activity-background-color:var(--color-secundario-10);
+    --c-card-activity-background-color-dark:var(--color-primario-oscuro-5);
+    --c-card-activity-color-font-dark:var(--color-secundario-10);
+    --c-card-activity-margin:var(--margin-6);
+    --c-card-activity-padding:var(--padding-8);
+
+    -webkit-box-shadow: 4px -5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px -5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px -5px 5px 0px rgba(0,0,0,0.75);
+
+    
+    border:solid 2px gray;
+    background-color: var(--c-card-activity-background-color);
+    margin: var(--c-card-activity-margin);
+    padding: var(--c-card-activity-padding);
+    display: flex;
+    //justify-content:space-between;
+
+    font-weight: 700;
+    &__nombre{
+        width: 65%;
+        text-decoration: none;
+        //color: black;
+        color: inherit;
+    }
+    &:hover{
+        scale: 1.015;
+    }
+}
+.dark-theme-activity{
+    background-color: var(--c-card-activity-background-color-dark);
+    color:var(--c-card-activity-color-font-dark);
+    border: none;
+  }

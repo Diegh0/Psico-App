@@ -17,8 +17,8 @@ export class HabilidadesService {
 
 
   getHabilidades(){
-    return collectionData(this.collectionBD) as Observable<Habilidad[]>
+    return collectionData(this.collectionBD, {idField:"id"}) as Observable<Habilidad[]>
   }
-
+ 
 
 }
