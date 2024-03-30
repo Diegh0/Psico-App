@@ -11,7 +11,7 @@
     <div *ngFor="let key of getActividadKeys(actividad) ">
         
         <div class="c-card-activity" [class.dark-theme-activity]="isDarkTheme()"[class.light-theme-activity]="!isDarkTheme()">
-            <a class="c-card-activity__nombre" routerLink="/detalleActividad/{{actividad[key].id}}" href="#">
+            <a class="c-card-activity__nombre" routerLink="/actividadDetalle/{{actividad.id}}" href="#">
                 {{ actividad[key].nombre }}
             </a>
             <div class="c-card-activity__duracion">{{ actividad[key].duracion }} min</div>

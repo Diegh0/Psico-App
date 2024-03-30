@@ -1,8 +1,9 @@
 <div class="l-columns l-columns--1 l-columns--2@tablet l-columns--3@desktop">
     @for (habilidad of habilidades | async ; track habilidad.id){
     <div class="c-card-ability" [class.dark-theme-ability]="isDarkTheme()" [class.light-theme-ability]="!isDarkTheme()" [style.background-image]="'url(' + habilidad.urlImg + ')'">
-        <div class="c-card-ability__habilidades">{{habilidad.nombre}}</div>
-        
+        <a routerLink="/habilidadDetalle/{{habilidad.id}}" href="#">
+            <div class="c-card-ability__habilidades" >{{habilidad.nombre}}</div>
+        </a>
     </div>
     }
 

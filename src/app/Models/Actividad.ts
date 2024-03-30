@@ -1,6 +1,6 @@
 export interface Actividad{
     [key: string]: any;
-    id:number,
+    id:string
     nombre:string,
     duracion:number,
     descripcion:string,

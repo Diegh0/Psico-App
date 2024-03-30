@@ -32,6 +32,7 @@
         transform: translateY(-15px);
       }
    &__habilidades{
+    color: var(--c-card-ability-color-font);
     position: absolute;
     top: -55px; /* Coloca el texto encima del borde superior */
     border-top-left-radius: 10px; /* Ajusta los radios del borde para que coincidan con los de la tarjeta */

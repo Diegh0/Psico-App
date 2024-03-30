@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, collection, collectionData, query, where , doc} from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, query, where , doc, getDoc} from '@angular/fire/firestore';
 import { Actividad } from '../Models/Actividad';
-import { Observable, retry } from 'rxjs';
+import { Observable, from, map, retry } from 'rxjs';
 const PATH = 'Actividades';
 
 @Injectable({
@@ -13,12 +13,18 @@ export class ActividadesService {
   private collectionBD = collection(this.firestore,PATH);
 
   getActividades(): Observable<Actividad[]> {
-    return collectionData(this.collectionBD) as Observable<Actividad[]>;
+    return collectionData(this.collectionBD,{idField:"id"}) as Observable<Actividad[]>;
   }
-  // getActividadesPorHabilidad(habilidadRef: string): Observable<Actividad[]> {
-  //   const q = query(collection(this.firestore, 'actividades'), where('referencia', '==', doc(this.firestore, habilidadRef)));
-  //   return collectionData(q, { idField: 'id' }) as Observable<Actividad[]>;
-  // }
+  getActividad(idHabilidad: string, idActividad: string): Observable<Actividad> {
+    const docRef = doc(this.firestore, PATH, idHabilidad);
+    return from(getDoc(docRef)).pipe(
+      map(snapshot => snapshot.data() as any),
+      map(data => {
+        const actividadMap = data[`actividad${idHabilidad}`];
+        return actividadMap.find((actividad: any) => actividad.id === idActividad);
+      })
+    );
+  }
 
   
 }

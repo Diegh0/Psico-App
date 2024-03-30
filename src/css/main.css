@@ -367,6 +367,7 @@
   transform: translateY(-15px);
 }
 .c-card-ability__habilidades {
+  color: var(--c-card-ability-color-font);
   position: absolute;
   top: -55px; /* Coloca el texto encima del borde superior */
   border-top-left-radius: 10px; /* Ajusta los radios del borde para que coincidan con los de la tarjeta */
@@ -474,6 +475,45 @@
   color: var(--c-tittle-activity-color-font-dark);
 }
 
+.c-card-det-ability {
+  --c-card-det-background-color:var(--color-primario-claro-8);
+  --c-card-det-color:var(--color-primario-1);
+  --c-card-det-padding:var(--padding-9);
+  --c-card-det-margin:var(--margin-7);
+  --c-card-det-font-size:var(--size-sm);
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  background-color: var(--c-card-det-background-color);
+  color: var(--c-card-det-color);
+  border: solid 1px black;
+  border-radius: 10px;
+  text-align: left;
+  min-height: 20vh;
+  min-width: 30vw;
+  padding: var(--c-card-det-padding);
+  margin: var(--c-card-det-margin);
+  font-weight: 500;
+  font-size: var(--c-card-det-font-size);
+  top: 0;
+  transform: translateX(-50%);
+  animation: aparecerDesdeArriba 1s ease forwards;
+  opacity: 0;
+}
+.c-card-det-ability--stretched {
+  min-height: min-content;
+}
+
+@keyframes aparecerDesdeArriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 :root {
   --color-primario-oscuro-1:#190501;
   --color-primario-oscuro-2:#1B0B08;
@@ -510,6 +550,7 @@
   --size-xxs: 10px;
   --size-xs: 12px;
   --size-s: 15px;
+  --size-sm: 22px;
   --size-m: 24px;
   --size-l: 32px;
   --size-xl: 46px;
