@@ -15,16 +15,25 @@ export class ActividadesService {
   getActividades(): Observable<Actividad[]> {
     return collectionData(this.collectionBD,{idField:"id"}) as Observable<Actividad[]>;
   }
-  getActividad(idHabilidad: string, idActividad: string): Observable<Actividad> {
-    const docRef = doc(this.firestore, PATH, idHabilidad);
-    return from(getDoc(docRef)).pipe(
-      map(snapshot => snapshot.data() as any),
-      map(data => {
-        const actividadMap = data[`actividad${idHabilidad}`];
-        return actividadMap.find((actividad: any) => actividad.id === idActividad);
-      })
-    );
-  }
+//   getActividad(id:string){
+  
+//     return from(getDoc(doc(this.firestore,PATH,id))).pipe(
+//       map(snapshot =>snapshot.data() as Actividad)
+
+//     );
+// }
+getActividad(actividadId: string): Observable<Actividad | null> {
+  const actividadDocRef = doc(this.firestore, 'Actividades', actividadId);
+  return from(getDoc(actividadDocRef)).pipe(
+    map(actividadDoc => {
+      if (actividadDoc.exists()) {
+        return actividadDoc.data() as Actividad;
+      } else {
+        return null; // La actividad no existe
+      }
+    })
+  );
+}
 
   
 }

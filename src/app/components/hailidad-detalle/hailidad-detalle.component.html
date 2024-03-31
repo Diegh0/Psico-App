@@ -1,36 +1,42 @@
 <div class="l-columns l-columns--1 l-columns--1@tablet l-columns--2@desktop">
     @if(habilidad$ | async; as habilidad){
-        <div class="l-columns l-columns--2@tablet l-columns--2@desktop">
-            <!-- <p>{{habilidad.subtitulo}}</p> -->
+
+        <div class="l-columns l-columns--2@tablet l-columns--2@desktop g--margin-top-10 g--margin-bottom-15">
 
             <div class="l-columns__area--span-1@tablet l-columns__area--span-1@desktop">
-                <div class="c-card-det-ability">
+                <div class="c-card-det-ability "  [class.dark-theme-ability-det]="isDarkTheme()">
+                    <h3 class="c-card-det-ability__title">{{habilidad.subtitulo}}</h3>
                     <p>{{habilidad.txt1}}</p>
                 </div>
             </div>
-            <div class="l-columns__area--span-1@tablet l-columns__area--span-1@desktop">
-                <div class="c-card-det-ability">
+            <div class="l-columns__area--span-1@tablet l-columns__area--span-1@desktop" >
+                <div class="c-card-det-ability " [class.dark-theme-ability-det]="isDarkTheme()">
                     <p>{{habilidad.txt2}}</p>
                 </div>
             </div>
             
-            <div class="l-columns__area--span-2@tablet l-columns__area--span-2@desktop">
-                <div class="c-card-det-ability c-card-det-ability--stretched" *ngIf="habilidad.txt3">
+            <div class="l-columns__area--span-2@tablet l-columns__area--span-2@desktop" >
+                <div class="c-card-det-ability c-card-det-ability--stretched" *ngIf="habilidad.txt3" [class.dark-theme-ability-det]="isDarkTheme()">
                     <p>{{habilidad.txt3}}</p>
                 </div>
             </div>
-            <div class="l-columns__area--span-2@tablet l-columns__area--span-2@desktop">
-                <div class="c-card-det-ability" *ngIf="habilidad.txt4">
+            <div class="l-columns__area--span-2@tablet l-columns__area--span-2@desktop" >
+                <div class="c-card-det-ability " *ngIf="habilidad.txt4" [class.dark-theme-ability-det]="isDarkTheme()">
                     <p>{{habilidad.txt4}}</p>
                 </div>
             </div>            
         </div>
-        <div class="div2">
-            <ul>
-                @for (tip of habilidad.tips; track $index) {
-                   <li>{{tip}}</li> 
-                }
-            </ul>
+        <div class="c-dropdown">
+            <div class="l-flex l-flex--justify-content-center ">
+                <button class="c-dropdown__dropbtn" [class.dark-theme-dropdown-btn]="isDarkTheme()" (click)="toggleDropdown()"  >¿Cómo lo hago?</button>
+            </div>         
+            <div class="l-flex l-flex--justify-content-center">
+                <div class="c-dropdown__content" [class.dark-theme-dropdown-content]="isDarkTheme()" [ngClass]="{'active': dropdownOpen}" *ngIf="dropdownOpen"> 
+                    @for (tip of habilidad.tips; track $index) {
+                        <p class="c-card-det-ability__tip">-{{tip}}</p> 
+                    }      
+                </div>
+            </div>        
         </div>         
     }
 </div> 

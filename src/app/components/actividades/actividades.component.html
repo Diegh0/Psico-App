@@ -1,22 +1,29 @@
-<select id="tareas" [(ngModel)]="filtroEstado">
-    <option *ngFor="let opcion of opciones" [value]="opcion">{{ opcion }}</option>
-</select>
-
-<div *ngFor="let actividad of actividades | async ">
+@if(dropdownOpen==false){
+    <a (click)="toggleDropdown()"><img class="g--margin-top-9 g--margin-left-8" src="../../assets/actividades/ojo.png" width="32px"></a>
+}@else{
+    <a (click)="toggleDropdown()"><img class="g--margin-top-9 g--margin-left-8" src="../../assets/actividades/ojoCerrado.png" width="32px"></a>
+}
+<div *ngFor="let actividad of actividades | async">
     <div >
         <div class="c-title-activity" [class.dark-theme-title-activity]="isDarkTheme()"[class.light-theme-title-activity]="!isDarkTheme()">
             {{actividad.nombreHabilidad}}
         </div>
     </div>
-    <div *ngFor="let key of getActividadKeys(actividad) ">
-        
-        <div class="c-card-activity" [class.dark-theme-activity]="isDarkTheme()"[class.light-theme-activity]="!isDarkTheme()">
-            <a class="c-card-activity__nombre" routerLink="/actividadDetalle/{{actividad.id}}" href="#">
-                {{ actividad[key].nombre }}
+    <div class="c-dropdown-actv">
+        <div *ngFor="let key of getActividadKeys(actividad) ">  
+            <a class="c-card-activity" [class.dark-theme-activity]="isDarkTheme()"[class.light-theme-activity]="!isDarkTheme()" >
+                <p class="c-card-activity__nombre">
+                    {{ actividad[key].nombre }}
+                </p>
+                <div class="c-card-activity__duracion">{{ actividad[key].duracion }} min</div>
             </a>
-            <div class="c-card-activity__duracion">{{ actividad[key].duracion }} min</div>
+            <div class="c-dropdown-actv__content"[class.dark-theme-activity-det]="isDarkTheme()" [ngClass]="{'active': dropdownOpen}" *ngIf="dropdownOpen">
+                <p>{{actividad[key].descripcion}}</p>
+                <p>{{actividad[key].desc2}}</p>
+                <p>{{actividad[key].desc3}}</p>
+                <p>{{actividad[key].desc4}}</p>
+                <p>{{actividad[key].desc5}}</p>
+            </div>
         </div>
-    </div>
+    </div>  
 </div>
-
-    

@@ -4,7 +4,7 @@
     --body-background-color:var(--color-primario-claro-9);
     
     background-color: var(--body-background-color);
-    height: 100%;
+    min-height: 100vh;
     font-family: 'Quicksand', sans-serif;
 }
 .dark-theme-body {

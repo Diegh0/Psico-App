@@ -20,5 +20,42 @@
     .g--margin-right-#{$i} {
         margin-right: nth($margins, $i);
     }
+    .g--margin-bottom-#{$i} {
+        margin-bottom: nth($margins, $i);
+    }
+}
+
+@each $margin, $lista in $margins {
+    @for $i from 1 through length($lista) {
+        .g--margin-#{$margin} {
+            margin: nth($lista, $i);
+        }
+    }
+}
+@each $key, $value in $breakpoints {
+    @media (min-width:#{$value}) {
+        $separator: "\\@";
+
+        @if($key =="") {
+            $separator: "";
+        }
+
+        $index : 0;
+
+        @each $margin in $margins {
+            .g--margin-#{$index}#{$separator}#{$key} {
+                margin: var(--margins-#{$index});
+            }
+            
+            .g--margin-left-#{$index}#{$separator}#{$key} {
+                margin-left: var(--margins-#{$index});
+            }
+
+            .g--margin-top-#{$index}#{$separator}#{$key} {
+                margin-top: var(--margins-#{$index});
+            }
+            $index: $index + 1;
+        }
+    }
 }
 

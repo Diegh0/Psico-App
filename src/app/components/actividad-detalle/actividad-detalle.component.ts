@@ -17,13 +17,10 @@ export class ActividadDetalleComponent {
   private  activateRoute = inject(ActivatedRoute);
   actividad$!: Observable<Actividad | Actividad[]>;
 
-  habilidadId: string = '...'; // ID de la habilidad (puedes obtenerlo como sea necesario)
-  actividadId: string = '';
 
-  constructor() {}
 
-  ngOnInit() {
-    this.actividadId = this.activateRoute.snapshot.params['id'];
-    this.actividad$ = this.actividadService.getActividad(this.habilidadId, this.actividadId);
-  }
+  
+
+  
+  
 }
