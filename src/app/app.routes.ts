@@ -5,6 +5,8 @@ import { ActividadesComponent } from './components/actividades/actividades.compo
 import { HailidadDetalleComponent } from './components/hailidad-detalle/hailidad-detalle.component';
 import { ActividadDetalleComponent } from './components/actividad-detalle/actividad-detalle.component';
 import { DiarioComponent } from './components/diario/diario.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 export const routes: Routes = [
     { path:'',component:InicioComponent},
@@ -12,5 +14,6 @@ export const routes: Routes = [
     { path:'actividadesTotales', component:ActividadesComponent},
     { path:'habilidadDetalle/:id', component:HailidadDetalleComponent},
     { path:'actividadDetalle/:id', component:ActividadDetalleComponent},
-    { path:'diario',component:DiarioComponent}
+    { path:'diario',component:DiarioComponent},
+    { path:'inicioSesion',component:RegistroComponent}
 ];
