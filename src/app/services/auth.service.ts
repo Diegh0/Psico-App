@@ -11,11 +11,7 @@ import { Observable, from } from 'rxjs';
 })
 export class AuthService {
 
-  constructor() { }
-  // auth = inject(AngularFireAuth);
   firebaseAuth = inject(Auth);
-  firestore = inject(AngularFirestore);
-  router = inject(Router);
 
   getAuth(){
     return getAuth;
@@ -32,7 +28,4 @@ export class AuthService {
       );
       return from(promise);
   }
-  // signUp(user : User){
-  //   return createUserWithEmailAndPassword(getAuth(), user.email,user.password)
-  // }
 }

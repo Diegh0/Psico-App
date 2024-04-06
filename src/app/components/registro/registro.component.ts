@@ -12,10 +12,17 @@ import { Router } from '@angular/router';
   styleUrl: './registro.component.scss'
 })
 export class RegistroComponent {
-  authService = inject(AuthService);
-  fb = inject(FormBuilder);
-  http= inject(HttpClient);
-  router = inject(Router);
+  //authService = inject(AuthService);
+  //fb = inject(FormBuilder);
+  //http= inject(HttpClient);
+  //router = inject(Router);
+
+  constructor(
+    private authService: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
+  
   form = this.fb.nonNullable.group({
     username: ['', Validators.required],
     email: ['', Validators.required],
