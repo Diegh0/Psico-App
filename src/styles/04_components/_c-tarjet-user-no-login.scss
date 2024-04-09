@@ -1,0 +1,28 @@
+.c-tarjet-user-no-login{  
+    @include c-tarjet-user;
+    padding: 20px;
+    --c-tarjet-user-no-login-title-font-size: var(--size-l);
+    --c-tarjet-user-no-login-options-margin:var(--margin-9);
+
+    --c-tarjet-user-no-login-color-dark:var(--color-primario-oscuro-5);
+
+    &__title{
+        font-weight: 600;
+        font-size: var(--c-tarjet-user-no-login-title-font-size);
+    }
+    &__subtitle{
+        font-weight: 400;
+    }
+    &__options{
+        text-decoration: none;
+        font-weight: 500;
+        margin: var(--c-tarjet-user-no-login-options-margin);
+        color: black;
+        &:hover{
+            filter: drop-shadow(0 0 10px rgba(0,0,0, .80));
+        }
+    }
+}
+.dark-theme-tarjet-user{
+    @include dark-theme-tarjet-user;
+}

@@ -5,8 +5,9 @@ import { ActividadesComponent } from './components/actividades/actividades.compo
 import { HailidadDetalleComponent } from './components/hailidad-detalle/hailidad-detalle.component';
 import { ActividadDetalleComponent } from './components/actividad-detalle/actividad-detalle.component';
 import { DiarioComponent } from './components/diario/diario.component';
-import { AuthComponent } from './components/auth/auth.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/user.component';
 
 export const routes: Routes = [
     { path:'',component:InicioComponent},
@@ -15,5 +16,7 @@ export const routes: Routes = [
     { path:'habilidadDetalle/:id', component:HailidadDetalleComponent},
     { path:'actividadDetalle/:id', component:ActividadDetalleComponent},
     { path:'diario',component:DiarioComponent},
-    { path:'inicioSesion',component:RegistroComponent}
+    { path:'signUp',component:RegistroComponent},
+    { path:'logIn', component:LoginComponent},
+    { path:'user', component:UserComponent}
 ];

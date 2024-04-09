@@ -1,0 +1,30 @@
+<div class="c-screen-login-singup">
+    <div class="l-flex l-flex--justify-content-center">
+        <div class="c-screen-login-singup--bienvenida" [class.dark-theme-screen-login-bienvenida]="isDarkTheme()">
+            <div class="c-screen-login-singup--bienvenida__inf">
+                <p class="c-screen-login-singup__titulo-bienvenida" [class.dark-theme-screen-login-bienvenida]="isDarkTheme()">Bienvenido de nuevo</p>
+                <p class="c-screen-login-singup__subtitulo-bienvenida" [class.dark-theme-screen-login-bienvenida]="isDarkTheme()">¡Nos alegramos de verte!</p>
+            </div>        
+        </div>
+
+        <div class="c-screen-login-singup--form" [class.dark-theme-screen-login-form]="isDarkTheme()">
+            <div class="c-screen-login-singup--form__inf g--margin-top-17">
+                <p class="c-screen-login-singup__titulo-form">Iniciar Sesión</p>
+                <img src="../../../assets/registroSesion/google-icon.png" width="24px">
+                <p class="c-screen-login-singup__subtitulo-form">Usa tu email para regsitrarte</p>
+    
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div>
+                        <img src="../../../assets/registroSesion/sobre-black.png" width="16px"><input class="c-screen-login-singup__input" type="text" placeholder="Correo electrónico"  formControlName="email">
+                    </div>
+                    <div>
+                        <img src="../../../assets/registroSesion/candado-black.png" width="16px"><input type="password"  class="c-screen-login-singup__input" placeholder="Password" formControlName="password">
+                    </div>
+                    <div>
+                        <button class="c-screen-login-singup__btn" type="submit">Iniciar Sesión</button>
+                    </div>
+                </form>
+            </div>   
+        </div>
+    </div>
+</div>

@@ -10,10 +10,10 @@
                 <a class="c-nav__opcions" routerLink="/habilidades" href="#">Habilidades</a>
             </p>
             <p>
-                <a class="c-nav__opcions" href="#">Meditación</a>
+                <a class="c-nav__opcions" routerLink="/LogIn" href="#">Meditación</a>
             </p>
             <p>
-                <a class="c-nav__opcions" routerLink="/inicioSesion" href="#" >Sueño</a>
+                <a class="c-nav__opcions" routerLink="/SignUp" href="#" >Sueño</a>
             </p>
             <p>
                 <a class="c-nav__opcions" routerLink="/diario" href="#">Diario</a>
@@ -26,7 +26,8 @@
                 <img class="c-nav__img-day" src="../../assets/header/sun.png">
             }
             <mat-slide-toggle  (change)="toggleTheme()"></mat-slide-toggle>
-            <a><img class="c-nav__user" src="../../assets/header/user-icon2.png"></a>
+            <img (click)="openModal()" class="c-nav__user"  src="../../assets/header/user-icon2.png">
+            <app-user *ngIf="modalVisible" (closeModalEvent)="closeModal()"></app-user>
         </div>
     </div>
 </div>

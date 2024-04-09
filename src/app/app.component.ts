@@ -1,8 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { TemaAppService } from './services/tema-app.service';
+import { AuthService } from './services/auth.service';
+import { user } from '@angular/fire/auth';
 
 @Component({
     selector: 'app-root',
@@ -11,7 +13,7 @@ import { TemaAppService } from './services/tema-app.service';
     styleUrl: './app.component.scss',
     imports: [RouterOutlet, HeaderComponent, FooterComponent]
 })
-export class AppComponent {
+export class AppComponent{
   title = 'mental-health';
   private temaService  = inject(TemaAppService);
 

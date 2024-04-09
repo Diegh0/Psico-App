@@ -40,7 +40,9 @@ $l-flex-common-properties: (
 $l-justify-content-values: (
     "center": center,
     "between": space-between,
-    "space-around": space-around
+    "space-around": space-around,
+    "left": left,
+    "right": right
 );
 
 // Creamos el mapa de propiedades con los valores de "justify-content" extendidos

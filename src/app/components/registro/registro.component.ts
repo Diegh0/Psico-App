@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { TemaAppService } from '../../services/tema-app.service';
 
 @Component({
   selector: 'app-registro',
@@ -16,7 +17,7 @@ export class RegistroComponent {
   //fb = inject(FormBuilder);
   //http= inject(HttpClient);
   //router = inject(Router);
-
+  temaService = inject(TemaAppService);
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
@@ -27,6 +28,8 @@ export class RegistroComponent {
     username: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
+    firstName:['', Validators.required],
+    lastName:['', Validators.required]
   });
   onSubmit():void{
     const rawForm = this.form.getRawValue();
@@ -36,4 +39,8 @@ export class RegistroComponent {
       this.router.navigateByUrl('/');
     });
   }
+  isDarkTheme(): boolean {
+    return this.temaService.isDarkTheme();
+  }
+
 }

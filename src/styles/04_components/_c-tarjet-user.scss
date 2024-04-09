@@ -1,0 +1,71 @@
+ @mixin c-tarjet-user {
+    --c-tarjet-user-background-color-dark:var(--color-primario-oscuro-5);
+    --c-tarjet-user-background-color: var(--color-secundario-8);
+    --c-tarjet-user-username-font-size: var(--size-xl);
+
+    --c-tarjet-user-email-color-font: var(--color-primario-oscuro-8);
+    --c-tarjet-user-email-font-size: var(--size-s);
+
+    --c-tarjet-user-img-profile-margin:var(--margin-7);
+
+    --c-tarjet-user-options-margin:var(--margin-9);
+
+    --c-tarjet-user-btn-close-marg-right:var(--margin-11);
+    --c-tarjet-user-btn-close-marg-top:var(--margin-20);
+    --c-tarjet-user-btn-background-color:var(--color-primario-oscuro-5);
+
+
+    background-color: var(--c-tarjet-user-background-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding:0px;
+    max-width: 80%;
+    border: solid 2px black;
+ }
+ .c-tarjet-user{
+    
+    @include c-tarjet-user;
+
+    &__username {
+        font-weight: 600;
+        font-size: var(--c-tarjet-user-username-font-size);
+        margin: 0;
+    }
+
+    &__email {
+        color: var(--c-tarjet-user-email-color-font);
+        font-size: var(--c-tarjet-user-email-font-size);
+        font-weight: 600;
+    }
+
+    &__img-profile {
+        margin: var(--c-tarjet-user-img-profile-margin);
+        background-color: rgb(126, 126, 126);
+        border: solid 2px black;
+        width: min-content;
+    }
+
+    &__options {
+        text-decoration: none;
+        font-weight: 500;
+        margin: var(--c-tarjet-user-options-margin);
+        color: black;
+    }
+
+    &__close-btn {
+        position: relative;
+        //top: var(--c-tarjet-user-btn-close-marg-top);
+        //right: var(--c-tarjet-user-btn-close-marg-right);
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: var(--c-tarjet-user-btn-background-color);
+        font-size: 48px;
+    }
+}
+@mixin dark-theme-tarjet-user{
+    background-color: var(--c-tarjet-user-background-color-dark);
+    color: white;
+}
+.dark-theme-tarjet-user{
+    @include dark-theme-tarjet-user;
+}
