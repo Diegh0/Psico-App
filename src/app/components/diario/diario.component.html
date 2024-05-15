@@ -1,11 +1,10 @@
-<!-- <ckeditor [editor]="Editor" data=""></ckeditor> -->
-<!-- <ckeditor [editor]="Editor" [(ngModel)]="editorData"></ckeditor> -->
-<!-- <button (click)="saveAsDocx()">Guardar como .docx</button> -->
-<ckeditor
-  [(ngModel)]="editorData"
-  [editor]="Editor"
-  [config]="{
-    
-  }"
-></ckeditor>
+
+<div class="c-diario">
+  <ckeditor [(ngModel)]="editorData" [editor]="Editor"[config]="{}"></ckeditor>
+  <div class="l-flex l-flex--justify-content-center">
+    <button class="c-button c-button--diario" (click)="downloadPDF()">Descargar PDF</button>
+  </div>
+</div>
+
+
 

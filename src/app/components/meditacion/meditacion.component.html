@@ -9,15 +9,20 @@
         <p class="c-meditation-screen__instrucciones">-Situa tus pensamientos en el momento presente, ¿que ves?,¿que sientes?... </p>
     </div>
     
-    <div class="l-flex l-flex--justify-content-center">
-        <div class="input-container">
-            <input type="number" [(ngModel)]="minutesInput" placeholder="Minutes">
-            <span>:</span>
-            <input type="number" [(ngModel)]="secondsInput" placeholder="Seconds">
+    <div class="l-flex  l-flex--flex-direction-column">
+        <div class="l-flex l-flex--justify-content-center">
+            <div class="c-timer">
+                <input class="c-timer__time" type="number" [(ngModel)]="minutesInput" placeholder="Minutes">
+                <span>:</span>
+                <input class="c-timer__time" type="number" [(ngModel)]="secondsInput" placeholder="Seconds">
+            </div>
+        </div>      
+        <div class="l-flex   l-flex--justify-content-center l-flex--flex-direction-row@tablet l-flex--flex-direction-row@desktop ">
+            <button class="c-timer__btn" (click)="startTimer()">Start</button>
+            <button class="c-timer__btn c-timer__btn--stop" (click)="stopAlarm()">Stop</button> <!-- Agregado el botón de Stop -->
         </div>
-        <button (click)="startTimer()">Start</button>
         <div id="timerDisplay">{{ displayMinutes }}:{{ displaySeconds }}</div>
-        <audio id="alarmSound" src="../../../assets/audios/alarm.mp3"></audio>
+        <audio id="alarmSound" src="../../../assets/audios/alarmaMeditacion.mp3"></audio>
     
     </div>
     

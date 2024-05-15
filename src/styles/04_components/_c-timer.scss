@@ -1,0 +1,35 @@
+.c-timer{
+    --c-timer-margin-top:var(--margin-7);
+    --c-timer-padding-btn:var(--padding-7);
+    
+    
+    &__time{
+        height: 20vh;
+        width: 20vw;
+        text-align: center;
+        opacity: 0.4;
+        background-color: black;
+        color: white;
+        font-weight: 900;
+        margin-top: var(--c-timer-margin-top);
+        
+
+    }
+    &__btn{
+        --c-timer-btn-bck-color:var(--color-primario-claro-4);
+        width: 120px;
+        margin-top: 40px;
+        padding:15px;
+        font-weight:500;
+        border-radius: 10px;
+        background-color: var(--c-timer-btn-bck-color);
+        opacity: 0.9;
+        &:active{
+            scale: 0.98;
+        }
+        &--stop{
+            background-color: rgb(218, 61, 61);
+        }
+    }
+    
+}

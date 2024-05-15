@@ -15,7 +15,7 @@ export class MeditacionComponent {
   displayMinutes: string = '00';
   displaySeconds: string = '00';
   alarmSound: HTMLAudioElement = new Audio();
-
+  timer:any;
   startTimer() {
     const totalSeconds: number = this.minutesInput * 60 + this.secondsInput;
 
@@ -45,9 +45,16 @@ export class MeditacionComponent {
       this.displaySeconds = this.formatTime(seconds);
     }, 1000);
 
-    this.alarmSound.src = 'assets/audios/alarm.mp3'; // Set the path to your audio file
+    this.alarmSound.src = '../../../assets/audios/alarmaMeditacion.mp3'; // Set the path to your audio file
     this.alarmSound.loop = true;
   }
+  stopAlarm() {
+    clearInterval(this.timer);
+    this.alarmSound.pause();
+    this.displayMinutes = '00';
+    this.displaySeconds = '00';
+  }
+
 
   formatTime(time: number): string {
     return time < 10 ? "0" + time : time.toString();

@@ -17,6 +17,10 @@
     &:hover{
         cursor: pointer;
     }
+    &--diario{
+        margin-top: 20px;
+    }
+  
 }
 .dark-theme-button{
     background-color: var(--c-button-background-color-dark);
