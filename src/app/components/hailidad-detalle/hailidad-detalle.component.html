@@ -2,9 +2,11 @@
     @if(habilidad$ | async; as habilidad){
 
         <div class="l-columns l-columns--2@tablet l-columns--2@desktop g--margin-top-10 g--margin-bottom-15">
-
+           
             <div class="l-columns__area--span-1@tablet l-columns__area--span-1@desktop">
-                <div class="c-card-det-ability "  [class.dark-theme-ability-det]="isDarkTheme()">
+                
+                <div class="c-card-det-ability " [class.dark-theme-ability-det]="isDarkTheme()">
+                    
                     <h3 class="c-card-det-ability__title">{{habilidad.subtitulo}}</h3>
                     <p>{{habilidad.txt1}}</p>
                 </div>
@@ -32,7 +34,7 @@
             </div>         
             <div class="l-flex l-flex--justify-content-center">
                 <div class="c-dropdown__content" [class.dark-theme-dropdown-content]="isDarkTheme()" [ngClass]="{'active': dropdownOpen}" *ngIf="dropdownOpen"> 
-                    @for (tip of habilidad.tips; track $index) {
+                    @for (tip of habilidad.tips || habilidad.Tips; track $index) {
                         <p class="c-card-det-ability__tip">-{{tip}}</p> 
                     }      
                 </div>

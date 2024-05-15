@@ -15,13 +15,7 @@ export class ActividadesService {
   getActividades(): Observable<Actividad[]> {
     return collectionData(this.collectionBD,{idField:"id"}) as Observable<Actividad[]>;
   }
-//   getActividad(id:string){
-  
-//     return from(getDoc(doc(this.firestore,PATH,id))).pipe(
-//       map(snapshot =>snapshot.data() as Actividad)
 
-//     );
-// }
 getActividad(actividadId: string): Observable<Actividad | null> {
   const actividadDocRef = doc(this.firestore, 'Actividades', actividadId);
   return from(getDoc(actividadDocRef)).pipe(

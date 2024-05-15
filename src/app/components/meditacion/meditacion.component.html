@@ -1,0 +1,25 @@
+<div class="c-meditation-screen">
+    <h1 class="c-meditation-screen__texto">
+        " La mente es todo. Te conviertes en lo que crees. "
+    </h1>
+    <div class="l-flex l-flex--flex-direction-column">
+        <p class="c-meditation-screen__instrucciones g--margin-top-14">-Respira Hondo</p>
+        <p class="c-meditation-screen__instrucciones">-Situtate sentado con la espalda erguida</p>
+        <p class="c-meditation-screen__instrucciones">-Coloca las manos en posicion <a href="https://www.yogaenred.com/2014/01/08/mudras-dhyani-mudra/#:~:text=El%20Dhyana%20Mudra%20es%20el,los%20sentidos%2C%20y%20la%20tranquilidad." class="c-meditation-screen__instrucciones c-meditation-screen__enlace">Dhyana mudra</a></p>
+        <p class="c-meditation-screen__instrucciones">-Situa tus pensamientos en el momento presente, ¿que ves?,¿que sientes?... </p>
+    </div>
+    
+    <div class="l-flex l-flex--justify-content-center">
+        <div class="input-container">
+            <input type="number" [(ngModel)]="minutesInput" placeholder="Minutes">
+            <span>:</span>
+            <input type="number" [(ngModel)]="secondsInput" placeholder="Seconds">
+        </div>
+        <button (click)="startTimer()">Start</button>
+        <div id="timerDisplay">{{ displayMinutes }}:{{ displaySeconds }}</div>
+        <audio id="alarmSound" src="../../../assets/audios/alarm.mp3"></audio>
+    
+    </div>
+    
+    
+</div>

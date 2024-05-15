@@ -1,0 +1,18 @@
+<div class="l-flex l-flex--justify-content-center">
+    <div class="c-emotion-panel ">
+        <div class="l-columns l-columns--1 l-columns--2@tablet l-columns--2@desktop">
+            @for (emocion of emociones | async; track emocion.id) {
+
+            <div class="c-emotion-panel__emociones" [class.dark-theme-panel]="isDarkTheme()">
+                <div class="l-flex l-flex--flex-direction-column">
+                    <img class="c-emotion-panel__img" src="{{emocion.img}} " width="24px" (click)="getSentimiento(emocion.nombre)">
+                    <p class="c-emotion-panel__nombre" [class.dark-theme-panel-name]="isDarkTheme()">{{emocion.nombre}}</p>
+                    
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</div>
+

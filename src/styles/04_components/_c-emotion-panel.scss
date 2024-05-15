@@ -1,0 +1,31 @@
+.c-emotion-panel{
+    --c-panel-background-color:var(--color-secundario-4);
+    --c-panel-background-color-darck:var(--color-primario-oscuro-5);
+
+    --c-panel-margin:var(--margin-10);
+    --c-panel__emociones-padding:var(--padding-12);
+    margin: var(--c-panel-margin);
+    --c-panel__nombre-margin:var(--margin-5);
+    width: 30%;
+    height: 60%;
+
+    &__emociones{
+        background-color: var(--c-panel-background-color);
+        border: solid 1px gray;
+        padding: var(--c-panel__emociones-padding);
+        text-align: center;
+    }
+    &__nombre{
+        font-weight: 600;
+        margin: var(--c-panel__nombre-margin);
+    }
+    &__img {
+        display: block; // Asegura que la imagen se comporte como un bloque
+        margin: 0 auto; // Centra horizontalmente la imagen
+    }
+}
+.dark-theme-panel{
+    background-color: var(--c-panel-background-color-darck);
+    color: white;
+    border: solid 1px rgb(194, 194, 194);
+}

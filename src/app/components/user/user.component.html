@@ -3,27 +3,26 @@
 <div class="c-modal">
   <div class="c-tarjet-user" [class.dark-theme-tarjet-user]="isDarkTheme()">
     <div class="l-flex l-flex--justify-content-right">
-      <button class="c-tarjet-user__close-btn" [class.dark-theme-tarjet-user]="isDarkTheme()" type="button" (click)="closeModal()">
+      <button class="c-tarjet-user__close-btn" [class.dark-theme-tarjet-user]="isDarkTheme()" type="button"
+        (click)="closeModal()">
         <span>&times;</span> <!-- Aquí está el aspa (x) -->
       </button>
     </div>
-    <div
-      class="l-flex l-flex--flex-direction-column l-flex--flex-direction-row@tablet l-flex--flex-direction-row@desktop l-flex--justify-content-space-around@tablet l-flex--justify-content-space-around@desktop">
-      <div class="l-flex l-flex--justify-content-center">
-        <div class="c-tarjet-user__img-profile">
-          <img src="../../../assets/header/user-icon.png" width="126px">
-        </div>
+    <div class="l-flex l-flex--flex-direction-column l-flex--flex-direction-row@tablet l-flex--flex-direction-row@desktop l-flex--justify-content-space-around@tablet l-flex--justify-content-space-around@desktop">
+      <div class="l-flex l-flex--justify-content-center l-flex--align-items-center">
+        <button class="c-button" [class.dark-theme-button]="isDarkTheme()" (click)="emocionesNavigate()">¿Que sientes hoy?</button>
       </div>
-
       <div
         class="l-flex l-flex--flex-direction-column l-flex--justify-content-center@desktop l-flex--justify-content-center@tablet l-flex--flex-direction-column@tablet l-flex--flex-direction-column@desktop">
         <p class="c-tarjet-user__username">{{authService.currentUserSig().username}}</p>
-        <p class="c-tarjet-user__email" [class.dark-theme-tarjet-user]="isDarkTheme()">{{authService.currentUserSig().email}}</p>
+        <p class="c-tarjet-user__email" [class.dark-theme-tarjet-user]="isDarkTheme()">
+          {{authService.currentUserSig().email}}</p>
 
       </div>
     </div>
     <div class="l-flex l-flex--justify-content-center g--margin-10 ">
-      <a href="#" class="c-tarjet-user__options" (click)="logout()" [class.dark-theme-tarjet-user]="isDarkTheme()">Cerrar Sesión</a>
+      <a href="#" class="c-tarjet-user__options" (click)="logout()"
+        [class.dark-theme-tarjet-user]="isDarkTheme()">Cerrar Sesión</a>
       <a href="#" class="c-tarjet-user__options" [class.dark-theme-tarjet-user]="isDarkTheme()">Cambiar Contraseña</a>
     </div>
   </div>
@@ -33,16 +32,19 @@
 <div class="c-modal">
   <div class="c-tarjet-user-no-login" [class.dark-theme-tarjet-user]="isDarkTheme()">
     <div class="l-flex l-flex--justify-content-right">
-      <button class="c-tarjet-user__close-btn" [class.dark-theme-tarjet-user]="isDarkTheme()" type="button" (click)="closeModal()">
-        <span>&times;</span> 
+      <button class="c-tarjet-user__close-btn" [class.dark-theme-tarjet-user]="isDarkTheme()" type="button"
+        (click)="closeModal()">
+        <span>&times;</span>
       </button>
     </div>
 
     <p class="c-tarjet-user-no-login__title">OOPS, PARECE QUE NO ESTÁS REGISTRADO 😕</p>
     <p class="c-tarjet-user-no-login__subtitle">¿Tienes ya una cuenta con nosotros?</p>
     <div class="l-flex l-flex--justify-content-center g--margin-10 ">
-      <a href="#" routerLink="/signUp" class="c-tarjet-user-no-login__options" [class.dark-theme-tarjet-user]="isDarkTheme()">Crear una cuenta</a>
-      <a href="#" routerLink="/logIn" class="c-tarjet-user-no-login__options" [class.dark-theme-tarjet-user]="isDarkTheme()">Iniciar Sesión</a>
+      <a (click)="signUpNavigate()" class="c-tarjet-user-no-login__options"
+        [class.dark-theme-tarjet-user]="isDarkTheme()">Crear una cuenta</a>
+      <a (click)="logInNavigate()" class="c-tarjet-user-no-login__options"
+        [class.dark-theme-tarjet-user]="isDarkTheme()">Iniciar Sesión</a>
     </div>
   </div>
 </div>

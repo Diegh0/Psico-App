@@ -1,0 +1,82 @@
+.c-panel-videos{
+    //border: solid 1px black;
+    --c-panel-margin:var(--margin-11);
+    --c-panel-padding:var(--padding-11);
+
+    --c-panel-title-font-size:var(--size-sm);
+    --c-panel-title-margin-top:var(--margin-9);
+
+    --c-panel-autor-font-size:(--size-s);
+
+    --c-panel-enlace-font-size:(--size-s);
+    --c-panel-enlace-margin-top:var(--margin-9);
+
+    width: min-content;
+    margin: var(--c-panel-margin);
+    padding: var(--c-panel-padding);
+    &:hover{
+        background-color: rgb(185, 185, 185,0.2);    
+        border-radius: 40px;
+        scale: 1.1;
+        opacity: 0.7;
+    }
+    
+    &__img{
+        border-radius: 15px;
+        //filter: brightness(80%) contrast(150%);
+        filter: brightness(150%);
+
+    }
+    &__titulo{
+        font-weight: 700;
+        font-size: var(--c-panel-title-font-size);
+        margin-bottom: 0;
+        margin-top: var(--c-panel-title-margin-top);
+    }
+    &__autor{
+        margin-top: 0;
+        font-weight: 300;
+        font-size: var(--c-panel-autor-font-size);
+
+    }
+    &__enlace{
+        text-decoration: none;
+        color: black;
+        font-size: var(--c-panel-enlace-font-size);
+        margin-top: var(--c-panel-enlace-margin-top);
+        &:hover{
+            border-bottom:solid black 1px ;
+        }
+    }
+}
+
+@keyframes loadingAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Estilo para el contenedor de la animación */
+  .video-loading-animation {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    
+    &__content{
+        border: 8px solid #f3f3f3; /* Border del spinner */
+        border-top: 8px solid #3498db; /* Border que se anima */
+        border-radius: 50%; /* Hace que el border sea redondo */
+        width: 50px;
+        height: 50px;
+        animation: loadingAnimation 1s linear infinite; /* Asigna la animación */
+        margin: auto; /* Centra el spinner */
+    }
+
+  }
+  .dark-theme-panel-videos{
+    color: white;
+    
+  }

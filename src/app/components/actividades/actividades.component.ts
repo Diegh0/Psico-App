@@ -24,11 +24,6 @@ export class ActividadesComponent {
   actividades = this.actividadesService.getActividades();
   dropdownOpen = false;
 
-  toggleDropdown() {    
-    this.dropdownOpen = !this.dropdownOpen;
-  }
-  
-
   getActividadKeys(actividad: any): string[] {
     // Esto asume que cada actividad es un objeto con claves de actividad
     return Object.keys(actividad).filter(key => key.startsWith('actividad'));
@@ -39,5 +34,9 @@ export class ActividadesComponent {
   }
   isDarkTheme(): boolean {
     return this.temaService.isDarkTheme();
+  }
+
+  toggleDropdown() {    
+    this.dropdownOpen = !this.dropdownOpen;
   }
 }

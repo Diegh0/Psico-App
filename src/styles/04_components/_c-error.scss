@@ -1,0 +1,19 @@
+.c-error{
+    text-align: center;
+    &__img{
+        margin:50px;
+    }
+    &__mensaje{
+        font-size: 50px;
+        font-weight: 800;
+    }
+    &__mensaje-oops{
+        font-size: 100px;
+        font-weight: 800;
+
+    }
+    &__error{
+        font-size: 80px;
+        font-weight: 800;
+    }
+}

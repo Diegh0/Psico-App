@@ -1,0 +1,58 @@
+.c-meditation-screen {
+    background-image: url("../../assets/meditacion/meditacion.jpg");
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    opacity: 0.9;
+    filter: brightness(70%) contrast(130%);
+    /* Ajusta la altura para ocupar toda la pantalla */
+    height: 85vh;
+
+    &__texto {
+        margin: 0;
+        text-align: center;
+        font-weight: 300;
+        color: white;
+        font-size: 66px;
+        padding-top: 5%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        opacity: 0.5;
+        transition: opacity 1s ease; /* Se mantiene */
+        animation: aparecerDesdeArriba 1.4s ease forwards;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__instrucciones {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 400;
+        opacity: 0.5;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        transition: opacity 1s ease; /* Se mantiene */
+        animation: aparecerDesdeArriba 1.4s ease forwards;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__enlace{
+        text-decoration: none;
+        opacity: 0.9;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes aparecerDesdeArriba {
+    from {
+        transform: translateY(-100%);
+        
+    }
+    to {
+        transform: translateY(0);
+    }
+}

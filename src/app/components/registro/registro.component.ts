@@ -13,10 +13,6 @@ import { TemaAppService } from '../../services/tema-app.service';
   styleUrl: './registro.component.scss'
 })
 export class RegistroComponent {
-  //authService = inject(AuthService);
-  //fb = inject(FormBuilder);
-  //http= inject(HttpClient);
-  //router = inject(Router);
   temaService = inject(TemaAppService);
   constructor(
     private authService: AuthService,

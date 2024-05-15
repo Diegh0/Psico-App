@@ -738,6 +738,7 @@
 }
 .c-tarjet-user-no-login__options:hover {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+  cursor: pointer;
 }
 
 .dark-theme-tarjet-user {
@@ -823,6 +824,64 @@
 
 .dark-theme-screen-login-form {
   background-color: var(--c-screen-login-singup--form-dark-background-color);
+}
+
+.c-button {
+  --c-button-padding:var(--padding-4);
+  --c-button-background-color:var(--color-primario-claro-5);
+  --c-button-background-color-dark:var(--color-primario-oscuro-8);
+  --c-button-color-font-dark:var(--color-secundario-5);
+  border-radius: 15px;
+  height: min-content;
+  padding: var(--c-button-padding);
+  font-weight: 600;
+  background-color: var(--c-button-background-color);
+}
+.c-button:active {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra que simula hundimiento */
+  scale: 0.98;
+}
+.c-button:hover {
+  cursor: pointer;
+}
+
+.dark-theme-button {
+  background-color: var(--c-button-background-color-dark);
+  color: var(--c-button-color-font-dark);
+}
+
+.c-emotion-panel {
+  --c-panel-background-color:var(--color-secundario-4);
+  --c-panel-margin:var(--margin-10);
+  border: solid 1px gray;
+  margin: var(--c-panel-margin);
+  width: 30%;
+  height: 50%;
+}
+.c-emotion-panel__emociones {
+  background-color: var(--c-panel-background-color);
+  border: solid 1px gray;
+  padding: 30px;
+  text-align: center;
+}
+
+.c-error {
+  text-align: center;
+}
+.c-error__img {
+  margin: 50px;
+}
+.c-error__mensaje {
+  font-size: 50px;
+  font-weight: 800;
+}
+.c-error__mensaje-oops {
+  font-size: 100px;
+  font-weight: 800;
+}
+.c-error__error {
+  font-size: 80px;
+  font-weight: 800;
 }
 
 :root {

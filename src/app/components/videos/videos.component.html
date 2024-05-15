@@ -1,0 +1,32 @@
+<div *ngIf="videos$ | async as videos; else loading">
+  <div *ngIf="videos.length > 0; else noVideos">
+
+    <div class="l-flex l-flex--flex-wrap-wrap l-flex--justify-content-center">
+      <div *ngFor="let video of videos">
+        <div class="c-panel-videos "[class.dark-theme-panel-videos]="isDarkTheme()">
+          <img class="c-panel-videos__img" src="{{video.urlImagen}}" width="350px" height="220">
+          <p class="c-panel-videos__titulo">{{ video.titulo }}</p>
+          <p class="c-panel-videos__autor">{{video.autor}}</p>
+          <a class="c-panel-videos__enlace" [class.dark-theme-panel-videos]="isDarkTheme()" [href]="video.enlace" target="_blank">Ver en YouTube</a>
+        </div>     
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+
+
+<ng-template #loading>
+   <div class="video-loading-animation">
+    
+      <div class="video-loading-animation__content">
+
+      </div> 
+    </div>
+</ng-template>
+<ng-template #noVideos>
+  <p>No se encontraron videos para este sentimiento.</p>
+</ng-template>

@@ -1,0 +1,24 @@
+.c-button{
+    --c-button-padding:var(--padding-4);
+    --c-button-background-color:var(--color-primario-claro-5);
+    --c-button-background-color-dark:var(--color-primario-oscuro-8);
+    --c-button-color-font-dark:var(--color-secundario-5);
+
+
+    border-radius: 15px;
+    height: min-content;
+    padding: var(--c-button-padding);
+    font-weight: 600;
+    background-color: var(--c-button-background-color);
+    &:active{
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra que simula hundimiento */
+        scale: 0.98;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+.dark-theme-button{
+    background-color: var(--c-button-background-color-dark);
+    color: var(--c-button-color-font-dark);
+}
