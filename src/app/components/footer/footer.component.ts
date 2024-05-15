@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { FrasesService } from '../../services/frases.service';
 import { AsyncPipe } from '@angular/common';
 import { Frase } from '../../Models/Frase';

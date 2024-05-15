@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Habilidad } from '../../Models/Habilidad';
 import { TemaAppService } from '../../services/tema-app.service';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-hailidad-detalle',

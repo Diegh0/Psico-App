@@ -1,14 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { HabilidadesService } from '../../services/habilidades.service';
 import { AsyncPipe } from '@angular/common';
-import { Habilidad } from '../../Models/Habilidad';
 import { TemaAppService } from '../../services/tema-app.service';
 import { Router, RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
-import { ActividadesService } from '../../services/actividades.service';
-import { Observable } from 'rxjs';
-import { Actividad } from '../../Models/Actividad';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-habilidades',

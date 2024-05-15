@@ -1,7 +1,7 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { Firestore, collection, collectionData, getDocs, query, where } from '@angular/fire/firestore';
 import { Video } from '../Models/Video';
-import { Observable, from, map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 const PATH = 'Videos';
 

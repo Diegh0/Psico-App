@@ -1,15 +1,9 @@
-import { Component, Inject, inject } from '@angular/core';
-import { CKEditorModule, ChangeEvent } from '@ckeditor/ckeditor5-angular';
-// import  Editor from 'ckeditor5-custom-build/build/ckeditor';
+import { Component } from '@angular/core';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import  Editor from '../../../../ckeditor5-custom-build/build/ckeditor';
 import * as html2pdf from 'html2pdf.js';
-import { FormsModule, NgModel } from '@angular/forms';
-import { saveAs } from 'file-saver';
-import { Document, Packer, Paragraph, TextRun } from 'docx';
+import { FormsModule} from '@angular/forms';
 import { NgStyle } from '@angular/common';
-
-
-
 
 @Component({
   selector: 'app-diario',

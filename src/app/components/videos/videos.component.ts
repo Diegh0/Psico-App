@@ -2,11 +2,7 @@ import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription, from } from 'rxjs';
-import { AsyncAction } from 'rxjs/internal/scheduler/AsyncAction';
-import { EmocionesService } from '../../services/emociones.service';
 import { VideosService } from '../../services/videos.service';
-import { collection, query, where, getDocs, Firestore } from "firebase/firestore";
-import { Injectable } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { TemaAppService } from '../../services/tema-app.service';
 

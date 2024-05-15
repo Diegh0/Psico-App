@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, collection, collectionData, query, where , doc, getDoc} from '@angular/fire/firestore';
+import { Firestore, collection, collectionData,doc, getDoc} from '@angular/fire/firestore';
 import { Actividad } from '../Models/Actividad';
 import { Observable, from, map, retry } from 'rxjs';
 const PATH = 'Actividades';

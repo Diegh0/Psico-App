@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, collection, collectionData, doc, getDoc } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData} from '@angular/fire/firestore';
 import { Emocion } from '../Models/Emociones';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 const PATH = 'Sentimientos';
 
 @Injectable({

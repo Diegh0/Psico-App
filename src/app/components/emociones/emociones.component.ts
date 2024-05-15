@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { EmocionesService } from '../../services/emociones.service';
 import { AsyncPipe, NgClass } from '@angular/common';
 import { Router } from '@angular/router';
