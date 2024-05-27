@@ -1,5 +1,11 @@
 # Psico-App
-<p style="text-align: center;">
-  Tener una buena salud mental es crucial. Entender nuestros sentimientos y aprender habilidades esenciales, como la autoestima, la socialización y la confianza en uno mismo, son fundamentales para mantener una mente sana. PsicoApp está diseñada para cuidar de tu salud mental, ayudándote a comprenderte mejor y a encontrar la paz interior que todos necesitamos.
-</p>
+In an increasingly fast-paced and demanding world, mental health has become a vital aspect of our overall well-being. The ability to manage our emotions, maintain healthy relationships, and have good self-esteem are essential skills for leading a balanced and fulfilling life. PsicoApp presents itself as an integral tool for those seeking to improve their mental and emotional health.
+
+PsicoApp offers a range of features designed to help users:
+
+-**Understand and manage their emotions**: Through exercises and tools that promote self-reflection and self-discovery.
+-**Improve self-esteem and self-confidence**: Providing resources and activities that reinforce a positive self-image.
+-**Foster socialization and healthy relationships**: With tips and techniques to improve social skills and personal interactions.
+-**Find inner peace**: Through guided mindfulness and meditation practices that help reduce stress and anxiety.
+
  
