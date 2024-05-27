@@ -25,6 +25,12 @@ PsicoApp offers a range of features designed to help users:
     <img src="https://github.com/Diegh0/Psico-App/assets/115450079/45fc64cf-580b-4c1f-a78f-7d076eb8a4d6" alt="Desktop App" style="width: 45%;">
 </div>
 
+## DARK MODE
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/Diegh0/Psico-App/assets/115450079/16f5af1f-5066-4cbe-a60a-b18bc6faaa14" alt="Desktop App" style="width: 45%;">
+    <img src="https://github.com/Diegh0/Psico-App/assets/115450079/027b2c15-1b56-4233-a2f8-1d482f58243f" alt="Desktop App" style="width: 45%;">
+</div>
+
 
 
 
