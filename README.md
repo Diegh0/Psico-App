@@ -33,9 +33,9 @@ PsicoApp offers a range of features designed to help users:
 
 ### HIGHLIGHTED SECTION
 
--**Dynamic** Footer: Each time you reload the page, the footer phrase will change.
--**CKEditor** Implementation
--Creation of the styles for each application component using **SASS architectural** structure.
+-**Dynamic** Footer: Each time you reload the page, the footer phrase will change.<br>
+-**CKEditor** Implementation<br>
+-Creation of the styles for each application component using **SASS architectural** structure.<br>
 
 
 
