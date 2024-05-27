@@ -11,4 +11,9 @@ PsicoApp offers a range of features designed to help users:
 
 -**Find inner peace**: Through guided mindfulness and meditation practices that help reduce stress and anxiety.<br>
 
+## APP RESPONSIVE
+
+![desktopApp](https://github.com/Diegh0/Psico-App/assets/115450079/ba1ba9cc-9f3e-46af-bfbd-fcae1edd3c15)
+
+
  
