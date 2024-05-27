@@ -20,7 +20,11 @@ PsicoApp offers a range of features designed to help users:
 
 ## LOGIN SYSTEM
 
-<img src="https://github.com/Diegh0/Psico-App/assets/115450079/dc75edc8-1a5a-4739-82f3-5811266ee36c" alt="Desktop App" style="width: 45%;">
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/Diegh0/Psico-App/assets/115450079/dc75edc8-1a5a-4739-82f3-5811266ee36c" alt="Desktop App" style="width: 45%;">
+    <img src="https://github.com/Diegh0/Psico-App/assets/115450079/45fc64cf-580b-4c1f-a78f-7d076eb8a4d6" alt="Desktop App" style="width: 45%;">
+</div>
+
 
 
 
