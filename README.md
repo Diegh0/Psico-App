@@ -31,7 +31,11 @@ PsicoApp offers a range of features designed to help users:
     <img src="https://github.com/Diegh0/Psico-App/assets/115450079/027b2c15-1b56-4233-a2f8-1d482f58243f" alt="Desktop App" style="width: 45%;">
 </div>
 
+### HIGHLIGHTED SECTION
 
+-**Dynamic** Footer: Each time you reload the page, the footer phrase will change.
+-**CKEditor** Implementation
+-Creation of the styles for each application component using **SASS architectural** structure.
 
 
 
