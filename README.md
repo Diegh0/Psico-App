@@ -13,7 +13,13 @@ PsicoApp offers a range of features designed to help users:
 
 ## APP RESPONSIVE
 
-![desktopApp](https://github.com/Diegh0/Psico-App/assets/115450079/ba1ba9cc-9f3e-46af-bfbd-fcae1edd3c15)
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/Diegh0/Psico-App/assets/115450079/28491af5-d2e8-4730-8a0f-3fe8ea3d43c8" alt="Desktop App" style="width: 45%;">
+    <img src="https://github.com/Diegh0/Psico-App/assets/115450079/10669bee-1109-4c6b-bc2e-c7c67e09bf5b" alt="Mobile App" style="width: 45%;">
+</div>
+
+
+
 
 
  
