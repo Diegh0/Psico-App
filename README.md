@@ -4,8 +4,11 @@ In an increasingly fast-paced and demanding world, mental health has become a vi
 PsicoApp offers a range of features designed to help users:
 
 -**Understand and manage their emotions**: Through exercises and tools that promote self-reflection and self-discovery.<br>
+
 -**Improve self-esteem and self-confidence**: Providing resources and activities that reinforce a positive self-image.<br>
+
 -**Foster socialization and healthy relationships**: With tips and techniques to improve social skills and personal interactions.<br>
+
 -**Find inner peace**: Through guided mindfulness and meditation practices that help reduce stress and anxiety.<br>
 
  
